@@ -1,14 +1,4 @@
 
-
-body{
-    marging: 0;
-    padding: 0;
-    background: url("../pictures/Hanteln_Wallpaper.jpg") no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    font-family: Quicksand;
-}
-
 .pricing-table {
     max-width: 1200px;
     margin: auto;
@@ -81,8 +71,8 @@ body{
     transform: rotate(45deg);
     padding: 10px 40px;
     position: absolute;
-    top: 12px;
-    right: -34px;
+    top: 10px;
+    right: -36px;
 }
 
 @media screen and (max-width: 980px){
