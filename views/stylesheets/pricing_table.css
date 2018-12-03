@@ -1,0 +1,116 @@
+@media screen and (max-width: 980px){
+    .col{
+        flex: 50%;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .col{
+        flex: 100%;
+    }
+}
+
+body{
+    marging: 0;
+    padding: 0;
+    background: url("../pictures/Hanteln_Wallpaper.jpg") no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.pricing-table {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.col{
+    flex: 25%;
+    padding: 10px;
+    max-width: 320px;
+    box-sizing: border-box;
+}
+
+.table{
+    background: white;
+    padding: 40px 20px;
+    font-family: "monterrate", sans-serif;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 10px #00000070;
+}
+
+.table h2{
+    text-transform: uppercase;
+}
+
+.table ul{
+    margin: 0;
+    padding: 0;
+}
+.table ul li{
+    padding: 10px 0;
+    list-style: none;
+}
+
+.table a{
+    text-decoration: none;
+    color: #2c3e50;
+    border: 2px solid;
+    display: block;
+    padding: 10px 0;
+    margin: 10px 0;
+    border-radius: 40px;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: 0.3s linear;
+}
+
+.table a:hover{
+    background: #2c3e50;
+    color: #fff;
+}
+
+.price{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.price span{
+    display: block;
+    font-size: 14px;
+}
+
+.popular{
+    background: #2c3e50;
+    color: #fff;
+    transform: rotate(45deg);
+    padding: 10px 40px;
+    position: absolute;
+    top: 12px;
+    right: -34px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
