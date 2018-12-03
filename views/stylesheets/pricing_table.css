@@ -1,14 +1,4 @@
-@media screen and (max-width: 980px){
-    .col{
-        flex: 50%;
-    }
-}
 
-@media screen and (max-width: 700px){
-    .col{
-        flex: 100%;
-    }
-}
 
 body{
     marging: 0;
@@ -16,6 +6,7 @@ body{
     background: url("../pictures/Hanteln_Wallpaper.jpg") no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    font-family: Quicksand;
 }
 
 .pricing-table {
@@ -92,6 +83,18 @@ body{
     position: absolute;
     top: 12px;
     right: -34px;
+}
+
+@media screen and (max-width: 980px){
+    .col{
+        flex: 50%;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .col{
+        flex: 100%;
+    }
 }
 
 
