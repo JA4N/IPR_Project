@@ -8,11 +8,6 @@ body{
     font-family: Quicksand;
 }
 
-header{
-    width: 100%;
-    height: 100vh;
-}
-
 nav{
     position: fixed;
     width: 100%;
