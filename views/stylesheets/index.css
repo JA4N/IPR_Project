@@ -1,86 +1,112 @@
 body{
     marging: 0;
     padding: 0;
-    background: url("../pictures/Hanteln_Wallpaper.jpg") no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    <!-- Schriftart -->
-    font-family: Quicksand;
-}
-
-nav{
-    position: fixed;
-    width: 100%;
-}
-
-nav ul{
-    list-style: none;
-    background: rgba(0,0,0,0.4);
     overflow: hidden;
-    color: #fff;
-    padding: 0px;
-    text-align: center;
-    margin: 0px;
-    transition: 1s;
-}
-nav.black ul{
-    background: #000;
 }
 
-nav ul li{
-    display: inline-block;
-    padding: 20px
-}
-
-nav ul li a{
-    text-decoration: none;
-    color: #fff;
-    font-size: 20px;
-}
-
-.menu-icon{
+header{
+    position: absolute;
+    z-index: 10;
     width: 100%;
-    background: #000;
-    text-align: right;
-    box-sizing: border-box;
-    padding: 15px 24px;
-    cursor: pointer;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+footer{
+    position: absolute;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    bottom: 0;
+}
+
+.navbar{
+    padding: 20px 0;
+}
+
+.navbar-brand{
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 2em;
+    color: white;
+}
+
+.nav-item{
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.navbar-light .navbar-nav .nav-link .nav-item:hover,
+.navbar-light .navbar-nav .nav-link .nav-item.active{
+    background: #262626;
     color: #fff;
-    display: none;
 }
 
-@media(max-width: 580px){
-    .logo{
-        position: fixed;
-        top: 0;
-        margin-top: 16px;
-    }
+.navbar-light .navbar-nav .nav-link .nav-item{
+    color: #262626;
+    padding: 5px;
+}
 
-    nav ul {
-        max-height: 0px;
-        background: #000;
-    }
+.banner{
+    position: relative;
+    background: url("../pictures/gym-room-vintage-wallpaper-high-definition.jpg");
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    padding: 250px 250px;
+}
 
-    nav.black ul{
-        background: #000;
-    }
+.banner h2{
+    margin: 0;
+    padding: 0;
+    font-size: 2.8em;
+    font-weight: 900;
+    color: #262626;
+    text-transform: uppercase;
+}
 
-    .showing{
-        max-height: 20em;
-    }
+.banner p{
+    margin: 1em 0 0;
+    padding: 0;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    color: #262626;
+}
 
-    nav ul li{
-        box-sizing: border-box;
-        width: 100%;
-        padding: 24px 0;
-        text-align: center;
-    }
+.btn{
+    display: inline-block;
+    margin: 1em 0 0;
+    background: #ff2670;
+    color: #fff;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border: none;
+    font-weight: 800;
+}
 
-    .menu-icon{
-        display: block;
-    }
+.btn:hover{
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar-light .navbar-toggler .collapse{
+    border: none;
+    color: #fff;
+    border: 2px solid #7f7f7f;
+    border-radius: 0;
+    outline: none;
+}
+
+.navbar-toggler{
+    background: white;
 }
 
 
 
+@media (max-width: 768px){
+    .banner{
+        padding: 250px 0;
+    }
+    .banner h2{
+        font-size: 1.8em;
+    }
+}
 
