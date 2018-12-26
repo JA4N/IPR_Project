@@ -1,10 +1,17 @@
 # IPR_Project
 This repository is a workspace for our web development project.
 
-[ ] create HTML files
-[ ] create CSS files
-[ ] create a responive design 
-[ ] create DB
-[ ] import DB
-[ ] connect frontend with backend
-[ ] moduletests
+##TODO
+
+
+- [x] create HTML files
+- [x] create CSS files
+- [x] create a responive design
+    - [ ] customize price list to new design
+    - [ ] customize team page
+    - [ ] add new pages
+    - [ ] add content
+- [ ] create DB
+    - [ ] import DB
+- [ ] connect frontend with backend
+- [ ] moduletests
