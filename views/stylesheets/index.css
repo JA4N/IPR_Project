@@ -26,7 +26,7 @@ footer{
     font-weight: 800;
     text-transform: uppercase;
     font-size: 2em;
-    color: white;
+    color: #262626;
 }
 
 .nav-item{
@@ -34,8 +34,8 @@ footer{
     text-transform: uppercase;
 }
 
-.navbar-light .navbar-nav .nav-link .nav-item:hover,
-.navbar-light .navbar-nav .nav-link .nav-item.active{
+.navbar-light .navbar-nav .nav-item .nav-link:hover,
+.navbar-light .navbar-nav .nav-item.active .nav-link{
     background: #262626;
     color: #fff;
 }
@@ -47,11 +47,11 @@ footer{
 
 .banner{
     position: relative;
-    background: url("../pictures/gym-room-vintage-wallpaper-high-definition.jpg");
+    background: url("../pictures/wolkenkratzer-grey-matter-wallpaper-small-rcm992x0.jpg");
     min-height: 100vh;
     background-size: cover;
     background-position: center;
-    padding: 250px 250px;
+    padding: 250px 0 250px;
 }
 
 .banner h2{
@@ -59,7 +59,7 @@ footer{
     padding: 0;
     font-size: 2.8em;
     font-weight: 900;
-    color: #262626;
+    color: white;
     text-transform: uppercase;
 }
 
@@ -68,7 +68,7 @@ footer{
     padding: 0;
     font-size: 1.2em;
     line-height: 1.5em;
-    color: #262626;
+    color: white;
 }
 
 .btn{
