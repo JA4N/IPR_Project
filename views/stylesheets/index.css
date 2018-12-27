@@ -11,7 +11,7 @@ header{
     background: rgba(0, 0, 0, 0.3);
 }
 
-/*First picture*/
+/*background picture*/
 .banner{
     position: relative;
     background: url("../pictures/124351-gym-background-2560x1704-xiaomi.jpg");
@@ -19,6 +19,39 @@ header{
     background-size: cover;
     background-position: center;
     padding: 250px 0 250px;
+}
+
+/* 1. section*/
+.banner h2{
+    margin: 0;
+    padding: 0;
+    font-size: 2.8em;
+    font-weight: 900;
+    color: white;
+    text-transform: uppercase;
+}
+
+.banner p{
+    margin: 1em 0 0;
+    padding: 0;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    color: white;
+}
+
+.button {
+    position: relative;
+    display: block;
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    font-size: 18px;
+    font-family: "monterrate";
+    text-decoration: none;
+    margin: 30px 0;
+    border: 2px solid #27ae60;
+    padding: 14px 50px;
+    text-transform: uppercase;
+    overflow: hidden;
 }
 
 /*Our Team*/
