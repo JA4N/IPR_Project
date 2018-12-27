@@ -8,7 +8,7 @@ This repository is a workspace for our web development project.
 - [x] create CSS files
 - [x] create a responive design
     - [ ] customize price list to new design
-    - [ ] customize team page
+    - [x] customize team page
     - [ ] add new pages
     - [ ] add content
 - [ ] create DB

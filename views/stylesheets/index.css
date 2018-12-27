@@ -106,3 +106,36 @@ footer{
         width: 100%;
     }
 }
+
+/*Studio*/
+.an{
+    float: left;
+    width: calc(100% / 3);
+    overflow: hidden;
+    padding: 40px 0;
+}
+
+.an img{
+    width: 250px;
+    height: 110px;
+    filter: grayscale(100%);
+}
+
+.an img:hover{
+    transition: 0.6s;
+    filter: grayscale(0%);
+}
+
+.studio{
+    background: #f1f1f1;
+    text-align: center;
+}
+
+.studio h1{
+    font-size: 20px;
+    text-transform: uppercase;
+    display: inline-block;
+    border-bottom: 4px solid;
+    padding-bottom: 10px;
+}
+/*Studio Responsive*/
