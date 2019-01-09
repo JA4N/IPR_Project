@@ -1,17 +1,10 @@
 // JavaScript Document
 const express = require('express');
-const mssql = require('mssql').verbose();
+const sqlite3 = require('sqlite3').verbose();
 const bodyParser = require('body-parser')
 
 // Create Connection
-const db =
-// Connect
-const db = new mssql.Database('./db/shoutbox.db', (err) => { //Ordner: db; Dateiname: shoutbox.db; muss angepasst werden bei anderen namen.
-  if (err) {
-    console.error(err.message);
-  }
-  console.log('Connected to the shoutbox database.'); // "shoutbox" ändern mit entsprechenden database namen.
-});
+const db = new sqlite3.Database('./db/IprogDB.db');
 
 const port = process.env.PORT || 3000;
 const app = express();
@@ -20,55 +13,71 @@ const app = express();
 app.set('view engine', 'ejs'); 
 
 //------------------------------------------------------
-app.use('/public', express.static(process.cwd() + '/public'));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended:true})); 
+app.use('/public', express.static(process.cwd() + '/public'));
 //------------------------------------------------------
-
-app.get('/', function(req, res) { 
-
-  const pageTitle = 'This is a title'; //?
-  const anArrayOfData = ['This', 'is', 'something', 'to', 'loop']; //?
-
-// [Von der Datenbank Lesen]	
-  db.all('SELECT * FROM shouts',(err, rows ) => { //"shouts" ersetzen mit Datenbank Tabellen namen
-
-	  
-  console.log(err);
-  console.log(rows);
-
-    res.render('pages/index', {
-      title: pageTitle,
-      data: anArrayOfData,
-      shouts: rows
-
+// ----Tabelle Personen !!---->
+app.get('/', async (req, res) => {
+  db.all('SELECT * FROM Personen', (err, Personen) => {
+    const success = {};
+    res.render('pages/index', { Personen, success }) // wohin schreiben?
   });
-
-  });
-
-
 });
 
-app.post('/pricing_table', function(req, res){
-  console.log(req.body);
-
-// [In die Datenbank Schreiben]	
-  db.run('INSERT INTO shouts (username, message) VALUES (?,?);',[req.body.username, req.body.message], error => {
-    console.log(error);
-    res.redirect('/');
-
-  })
-
-})
-
-app.get('/pricing_table', function(req, res) {
-  res.render('pages/pricing_table');
-
+app.get('/api/Personen', (req, res) => {
+  db.all('SELECT * FROM Personen', (err, rows) => {
+    if(err) {
+      throw err;
+    }
+    res.json(rows);
+  });
 });
+
+app.post('/api/Personen', async (req, res) => {
+  console.log("Request");
+  db.run('INSERT INTO Personen(Name, position) VALUES (?, ?);', [req.body.Name, req.body.position], function(err) {
+    if(err) {
+      console.log('Save error');
+    } else {
+      res.json( { "Name": this.lastID, "Name": req.body.Name, "position": req.body.position });
+      console.log('Post Save');
+    }
+  });
+});
+//------------------------------------<
+// ----Tabelle Produkte !!---->
+app.get('/', async (req, res) => {
+  db.all('SELECT * FROM Produkte', (err, Produkte) => {
+    const success = {};
+    res.render('pages/index', { Produkte, success }) //wohin schreiben?
+  });
+});
+
+app.get('/api/Produkte', (req, res) => {
+  db.all('SELECT * FROM Produkte', (err, rows) => {
+    if(err) {
+      throw err;
+    }
+    res.json(rows);
+  });
+});
+
+app.post('/api/Produkte', async (req, res) => {
+  console.log("Request");
+  db.run('INSERT INTO Produkte(Pname, Mbetrag, d1, d2, d3, d4) VALUES (?, ?, ?, ?, ?, ?);', [req.body.Pname, req.body.Mbetrag, req.body.d1, req.body.d2, req.body.d3, req.body.d4 ], function(err) {
+    if(err) {
+      console.log('Save error');
+    } else {
+      res.json( { "id": this.lastID, "Pname": req.body.Pname, "Mbetrag": req.body.Mbetrag, "d1": req.body.d1, "d2": req.body.d2, "d3": req.body.d3, "d4": req.body.d4 });
+      console.log('Post Save');
+    }
+  });
+});
+//------------------------------------<
 
 const server = app.listen(port, () => {
  console.log(`Server listening on port ${port}…`)
-
 });
 
-module.exports = server;
+module.exports = server
