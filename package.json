@@ -1,0 +1,26 @@
+{
+  "name": "ipr_project",
+  "version": "1.0.0",
+  "description": "This repository is a workspace for our web development project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node js/Server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JA4N/IPR_Project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JA4N/IPR_Project/issues"
+  },
+  "homepage": "https://github.com/JA4N/IPR_Project#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "sqlite3": "^4.0.4"
+  }
+}
