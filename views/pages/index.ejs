@@ -58,7 +58,20 @@
         <div class="inner-width">
             <h1>Unser Team</h1>
             <div class="pers">
-                <div class="pe">
+                <% Personen.forEach((pers) => { %>
+                    <div class="pe">
+                            <img src="../public/pictures/persons/<%=pers.profil %>" alt="">
+                            <div class="p-name"><%=pers.name %></div>
+                            <div class="p-des">position</div>
+                            <div class="p-sm">
+                                <a href="#"><i class="fab fa-facebook-f"></i> </a>
+                                <a href="#"><i class="fab fa-twitter"></i> </a>
+                                <a href="#"><i class="fab fa-instagram"></i> </a>
+                            </div>
+                        </div>
+                <% }) %>
+
+                <!-- <div class="pe">
                     <img src="../public/pictures/persons/th.jpg" alt="">
                     <div class="p-name">full name</div>
                     <div class="p-des">position</div>
@@ -87,7 +100,7 @@
                         <a href="#"><i class="fab fa-twitter"></i> </a>
                         <a href="#"><i class="fab fa-instagram"></i> </a>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
