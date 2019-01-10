@@ -21,8 +21,11 @@ app.use('/public', express.static(process.cwd() + '/public'));
 // ----Tabelle Personen !!---->
 app.get('/', async (req, res) => {
   db.all('SELECT * FROM Personen', (err, Personen) => {
-    const success = {};
-    res.render('pages/index', { Personen, success }) // wohin schreiben?
+    const datenDieWirAnDieViewAlsJsonUebergeben = {
+      Personen
+    }
+
+    res.render('pages/index', datenDieWirAnDieViewAlsJsonUebergeben) // wohin schreiben?
   });
 });
 
