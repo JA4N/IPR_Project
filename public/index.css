@@ -159,7 +159,7 @@ header{
 /*Studio*/
 .an{
     float: left;
-    width: calc(100% / 3);
+    width: 100%;
     overflow: hidden;
     padding: 40px 0;
 }
@@ -197,6 +197,14 @@ header{
 .angebote{
     background: #f1f1f1;
     text-align: center;
+}
+
+.angebote h1{
+    font-size: 20px;
+    text-transform: uppercase;
+    display: inline-block;
+    border-bottom: 4px solid;
+    padding-bottom: 10px;
 }
 
 /*Sociao Media Button*/
