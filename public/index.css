@@ -60,6 +60,11 @@ header{
     overflow: hidden;
 }
 
+#butt:hover{
+    background-color: #4caf50;
+    border: 2px solid rgba(0, 0, 0, 0.7);
+}
+
 /* ScrollTop Button */
 #myBtn {
     display: none; /* Hidden by default */
