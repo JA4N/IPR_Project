@@ -79,7 +79,15 @@ app.post('/api/Produkte', async (req, res) => {
   });
 });
 //------------------------------------<
+//-------------Test Login------------->
 
+
+app.get('/login', function(req, res) {
+  res.render('pages/login');
+
+});
+
+//-------------Test Login-------------<
 const server = app.listen(port, () => {
  console.log(`Server listening on port ${port}…`)
 });
