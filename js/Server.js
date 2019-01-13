@@ -52,9 +52,12 @@ app.post('/api/Personen', async (req, res) => {
 //------------------------------------<
 // ----Tabelle Produkte !!---->
 app.get('/', async (req, res) => {
-  db.all('SELECT * FROM Produkte', (err, Produkte) => {
-    const success = {};
-    res.render('pages/index', { Produkte, success }) //wohin schreiben?
+  db.all('SELECT * FROM Personen', (err, Produkte) => {
+    const datenDieWirAnDieViewAlsJsonUebergeben = {
+      Produkte
+    }
+
+    res.render('pages/index', datenDieWirAnDieViewAlsJsonUebergeben) // wohin schreiben?
   });
 });
 
@@ -87,7 +90,12 @@ app.get('/login', function(req, res) {
 
 });
 
-//-------------Test Login-------------<
+
+//-------------Login Seite-------------<
+//-------------ProbeKunden------------->
+
+//-------------ProbeKunden--------------<
+
 const server = app.listen(port, () => {
  console.log(`Server listening on port ${port}…`)
 });
