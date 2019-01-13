@@ -60,6 +60,11 @@ header{
     overflow: hidden;
 }
 
+#butt:hover{
+    background-color: #4caf50;
+    border: 2px solid rgba(0, 0, 0, 0.7);
+}
+
 /* ScrollTop Button */
 #myBtn {
     display: none; /* Hidden by default */
@@ -69,7 +74,7 @@ header{
     z-index: 99; /* Make sure it does not overlap */
     border: none; /* Remove borders */
     outline: none; /* Remove outline */
-    background-color: red; /* Set a background color */
+    background-color: black; /* Set a background color */
     color: white; /* Text color */
     cursor: pointer; /* Add a mouse pointer on hover */
     padding: 15px; /* Some padding */
