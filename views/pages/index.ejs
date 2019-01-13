@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../public/pricing_table.css">
     <!--Import JavaScript File-->
     <script src="../../js/index.js"></script>
+
     <!--Import Bootstrap 4-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -42,11 +43,28 @@
     <section id="anfang" class="banner">
         <div class="container">
             <div class="row">
-                <div class="col-sm-6">
+                <div class="col">
                     <h2>Probetraining</h2>
                     <p>Sie Möchten uns kennen lernen?
                     Dann buchen Sie unverbindlich ein Probetraining bei uns an Ihrem Wunschtermin.</p>
-                    <button class="button">Anmeldung</button>
+                </div>
+                <div class="col simple-form">
+                    <form id="registration">
+                        <input type="text" name="fname" id="button" placeholder="Vorname"><br>
+                        <br>
+                        <input type="text" name="fname" id="button" placeholder="Nachname"><br>
+                        <br>
+                        <input type="email" name="fname" id="button" placeholder="E-Mail"><br>
+                        <br>
+                        <input type="date" name="fname" id="button" placeholder="Datum"><br>
+                        <br>
+                        <label class="radio-inline" id="but"><input type="radio" name="Geschlecht" checked>Männlich</label>
+                        <label class="radio-inline" id="but"><input type="radio" name="Geschlecht">Weiblich</label>
+                        <label class="radio-inline" id="but"><input type="radio" name="Geschlecht">Bagger</label>
+                        <br><br>
+                        <input type="submit" value="Anmelden" id="butt">
+                    </form>
+
                 </div>
             </div>
         </div>

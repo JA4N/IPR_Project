@@ -24,6 +24,41 @@ header{
     background-position: center;
     padding: 250px 0 250px;
 }
+/*Registration*/
+.simple-form{
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 30px;
+    top: 0px;
+}
+
+#registration{
+    padding: 30px 0px;
+}
+
+#button{
+    padding: 8px;
+    border-radius: 5px;
+}
+
+#but{
+    color: white;
+    font-size: 18px;
+    margin-right: 30px;
+    margin-left: 3px;
+}
+
+#butt{
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    font-size: 18px;
+    font-family: "monterrate";
+    text-decoration: none;
+    border: 2px solid #27ae60;
+    padding: 14px 50px;
+    text-transform: uppercase;
+    overflow: hidden;
+}
 
 /* ScrollTop Button */
 #myBtn {
@@ -50,7 +85,7 @@ header{
 .banner h2{
     margin: 0;
     padding: 0;
-    font-size: 2.8em;
+    font-size: 3.2em;
     font-weight: 900;
     color: white;
     text-transform: uppercase;
@@ -59,24 +94,9 @@ header{
 .banner p{
     margin: 1em 0 0;
     padding: 0;
-    font-size: 1.2em;
+    font-size: 1.6em;
     line-height: 1.5em;
     color: white;
-}
-
-.button {
-    position: relative;
-    display: block;
-    color: white;
-    background: rgba(0, 0, 0, 0.7);
-    font-size: 18px;
-    font-family: "monterrate";
-    text-decoration: none;
-    margin: 30px 0;
-    border: 2px solid #27ae60;
-    padding: 14px 50px;
-    text-transform: uppercase;
-    overflow: hidden;
 }
 
 /*Our Team*/
