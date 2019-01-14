@@ -18,17 +18,18 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use('/public', express.static(process.cwd() + '/public'));
 //------------------------------------------------------
-// ----Tabelle Personen !!---->
+// ----Tabelle Personen & Personen ---->
 app.get('/', async (req, res) => {
   db.all('SELECT * FROM Personen', (err, Personen) => {
-    const datenDieWirAnDieViewAlsJsonUebergeben = {
-      Personen
-    }
-
-    res.render('pages/index', datenDieWirAnDieViewAlsJsonUebergeben) // wohin schreiben?
+    db.all('SELECT * FROM Produkte', (err, Produkte) => {
+      res.render('pages/index', {
+        Personen,
+        Produkte
+      })
+    });
   });
 });
-
+// ----Tabelle Personen !!---->
 app.get('/api/Personen', (req, res) => {
   db.all('SELECT * FROM Personen', (err, rows) => {
     if(err) {
@@ -51,15 +52,7 @@ app.post('/api/Personen', async (req, res) => {
 });
 //------------------------------------<
 // ----Tabelle Produkte !!---->
-app.get('/', async (req, res) => {
-  db.all('SELECT * FROM Produkte', (err, Produkte) => {
-    const datenDieWirAnDieViewAlsJsonUebergeben = {
-      Produkte
-    }
 
-    res.render('pages/index', datenDieWirAnDieViewAlsJsonUebergeben) // wohin schreiben?
-  });
-});
 
 app.get('/api/Produkte', (req, res) => {
   db.all('SELECT * FROM Produkte', (err, rows) => {
@@ -83,10 +76,10 @@ app.post('/api/Produkte', async (req, res) => {
 });
 //------------------------------------<
 //-------------Test Login------------->
-app.get('/login-list', function(req, res) {
-  res.render('pages/login-list');
-
+app.get('/login', function(req, res) {
+  res.render('pages/login')
 });
+
 
 // app.get('/login-list', function(req, res) {
 //   if (req.body.Lname === 'admin' && req.body.Lpw === '123456') 
@@ -100,7 +93,7 @@ app.get('/login-list', function(req, res) {
 
 //-------------Login Seite-------------<
 //-------------ProbeKunden------------->
-app.get('/', async (req, res) => {
+app.get('/login-list', async (req, res) => {
   db.all('SELECT * FROM ProbeKunden', (err, ProbeKunden) => {
     const datenDieWirAnDieViewAlsJsonUebergeben = {
       ProbeKunden
@@ -109,6 +102,7 @@ app.get('/', async (req, res) => {
     res.render('pages/login-list', datenDieWirAnDieViewAlsJsonUebergeben) // wohin schreiben?
   });
 });
+
 
 app.get('/api/ProbeKunden', (req, res) => {
   db.all('SELECT * FROM ProbeKunden', (err, rows) => {
