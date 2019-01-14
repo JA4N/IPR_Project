@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7820c162-bfbd-4733-a036-c8a0c5322dbd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/views/pages/login-list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/index.ejs" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,10 +38,10 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="642" />
+          <entry key="CSS" value="646" />
           <entry key="EJS" value="140" />
-          <entry key="HTML" value="385" />
-          <entry key="PLAIN_TEXT" value="6" />
+          <entry key="HTML" value="388" />
+          <entry key="PLAIN_TEXT" value="57" />
         </counts>
       </usages-collector>
     </session>
@@ -71,20 +69,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="13" lean-forward="true" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+            <state relative-caret-position="425">
+              <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/pages/login-list.html">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/pages/login-list.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="52" column="20" lean-forward="true" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
+            <state relative-caret-position="354">
+              <caret line="63" column="52" lean-forward="true" selection-start-line="63" selection-start-column="52" selection-end-line="63" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -101,8 +99,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/pages/index.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="8" selection-start-line="8" selection-end-line="9" selection-end-column="90" />
+            <state relative-caret-position="357">
+              <caret line="24" column="20" lean-forward="true" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -135,9 +133,9 @@
         <option value="$PROJECT_DIR$/views/pages/login.html" />
         <option value="$PROJECT_DIR$/public/login.css" />
         <option value="$PROJECT_DIR$/public/login-list.css" />
-        <option value="$PROJECT_DIR$/public/index.css" />
         <option value="$PROJECT_DIR$/views/pages/index.ejs" />
         <option value="$PROJECT_DIR$/views/pages/login-list.html" />
+        <option value="$PROJECT_DIR$/public/index.css" />
       </list>
     </option>
   </component>
@@ -208,7 +206,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547468454943" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547468612128" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../hft-asgmt-nodejs-JA4N" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -261,7 +259,7 @@
       <workItem from="1547385228835" duration="2409000" />
       <workItem from="1547392750581" duration="1175000" />
       <workItem from="1547394095253" duration="7608000" />
-      <workItem from="1547415274054" duration="3996000" />
+      <workItem from="1547415274054" duration="4259000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <created>1547285896276</created>
@@ -298,11 +296,18 @@
       <option name="project" value="LOCAL" />
       <updated>1547415817938</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Implements login list and reference to database">
+      <created>1547468525327</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1547468525327</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20947000" />
+    <option name="totallyTimeSpent" value="21210000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -384,7 +389,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update" />
+    <MESSAGE value="Implements login list and reference to database" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implements login list and reference to database" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/package.json">
@@ -423,6 +429,20 @@
     <entry file="file://$PROJECT_DIR$/public/login-list.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/views/pages/index.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="24" column="20" lean-forward="true" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/pages/login-list.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="63" column="52" lean-forward="true" selection-start-line="63" selection-start-column="52" selection-end-line="63" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/Server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -430,24 +450,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/pages/index.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="8" selection-start-line="8" selection-end-line="9" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="13" lean-forward="true" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/pages/login-list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="52" column="20" lean-forward="true" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
+        <state relative-caret-position="425">
+          <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
         </state>
       </provider>
     </entry>
