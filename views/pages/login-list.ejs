@@ -50,16 +50,16 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <% shouts.forEach(shout => { %>
+                    <% ProbeKunden.forEach((PK) => { %>
                     <tr>
-                        <td><%= shout.geschlecht %></td>
-                        <td><%= shout.vorname %></td>
-                        <td><%= shout.nachname %></td>
-                        <td><%= shout.email %></td>
-                        <td><%= shout.datum %></td>
-                        <td><%= shout.uhrzeit %></td>
+                        <td><%= PK.M %></td>
+                        <td><%= PK.PKVname %></td>
+                        <td><%= PK.PKNname %></td>
+                        <td><%= PK.PKMail %></td>
+                        <td><%= PK.PKdatum %></td>
+                        <td><%= PK.uhrzeit %></td>
                     </tr>
-                    <% }) %>
+                    <% }) %> 
 
                     <% data.forEach(function(d) { %>
                     <li><%= d %></li>
