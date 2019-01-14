@@ -185,7 +185,26 @@
         <div class="inner-width">
             <h1>Angebote</h1>
             <div class="pricing-table">
-                <div class="col">
+                    <% Produkte.forEach((Prod) => { %>
+                    <div class="col">
+                            <div class="table">
+                                <h2><%=Prod.Pname %></h2>
+                                <div class="price">
+                                        <%=Prod.Mbeitrag %>
+                                    <span>Per Month</span>
+                                </div>
+        
+                                <ul>
+                                    <li><strong>1</strong> <%=Prod.d1 %></li>
+                                    <li><strong>2</strong> <%=Prod.d2 %></li>
+                                    <li><strong>3</strong> <%=Prod.d3 %></li>
+                                    <li><strong>4</strong> <%=Prod.d4 %></li>
+                                </ul>
+                                <a href="#">Buy Now</a>
+                            </div>
+                        </div>
+                        <% }) %>
+                <!-- <div class="col">
                     <div class="table">
                         <h2>Product 1</h2>
                         <div class="price">
@@ -258,7 +277,7 @@
                         </ul>
                         <a href="#">Buy Now</a>
                     </div>
-                </div>
+                </div> -->
         </div>
         </div>
     </section>
