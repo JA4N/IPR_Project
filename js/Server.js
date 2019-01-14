@@ -52,7 +52,7 @@ app.post('/api/Personen', async (req, res) => {
 //------------------------------------<
 // ----Tabelle Produkte !!---->
 app.get('/', async (req, res) => {
-  db.all('SELECT * FROM Personen', (err, Produkte) => {
+  db.all('SELECT * FROM Produkte', (err, Produkte) => {
     const datenDieWirAnDieViewAlsJsonUebergeben = {
       Produkte
     }
@@ -72,27 +72,52 @@ app.get('/api/Produkte', (req, res) => {
 
 app.post('/api/Produkte', async (req, res) => {
   console.log("Request");
-  db.run('INSERT INTO Produkte(Pname, Mbetrag, d1, d2, d3, d4) VALUES (?, ?, ?, ?, ?, ?);', [req.body.Pname, req.body.Mbetrag, req.body.d1, req.body.d2, req.body.d3, req.body.d4 ], function(err) {
+  db.run('INSERT INTO Produkte(Pname, Mbeitrag, d1, d2, d3, d4) VALUES (?, ?, ?, ?, ?, ?);', [req.body.Pname, req.body.Mbeitrag, req.body.d1, req.body.d2, req.body.d3, req.body.d4 ], function(err) {
     if(err) {
       console.log('Save error');
     } else {
-      res.json( { "id": this.lastID, "Pname": req.body.Pname, "Mbetrag": req.body.Mbetrag, "d1": req.body.d1, "d2": req.body.d2, "d3": req.body.d3, "d4": req.body.d4 });
+      res.json( { "id": this.lastID, "Pname": req.body.Pname, "Mbeitrag": req.body.Mbeitrag, "d1": req.body.d1, "d2": req.body.d2, "d3": req.body.d3, "d4": req.body.d4 });
       console.log('Post Save');
     }
   });
 });
 //------------------------------------<
 //-------------Test Login------------->
-
-
-app.get('/login', function(req, res) {
-  res.render('pages/login');
+app.get('/login-list', function(req, res) {
+  res.render('pages/login-list');
 
 });
+
+// app.get('/login-list', function(req, res) {
+//   if (req.body.Lname === 'admin' && req.body.Lpw === '123456') 
+//   {
+//     res.render('/pages/login-list')
+//   }
+//   res.render('pages/login');
+
+// });
 
 
 //-------------Login Seite-------------<
 //-------------ProbeKunden------------->
+app.get('/', async (req, res) => {
+  db.all('SELECT * FROM ProbeKunden', (err, ProbeKunden) => {
+    const datenDieWirAnDieViewAlsJsonUebergeben = {
+      ProbeKunden
+    }
+
+    res.render('pages/login-list', datenDieWirAnDieViewAlsJsonUebergeben) // wohin schreiben?
+  });
+});
+
+app.get('/api/ProbeKunden', (req, res) => {
+  db.all('SELECT * FROM ProbeKunden', (err, rows) => {
+    if(err) {
+      throw err;
+    }
+    res.json(rows);
+  });
+});
 
 //-------------ProbeKunden--------------<
 
