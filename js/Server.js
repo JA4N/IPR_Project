@@ -103,17 +103,10 @@ app.get('/login-list', async (req, res) => {
   });
 });
 //---schreiben--->
-db.run('INSERT INTO ProbeKunden(PKVname, PKNname, PKMail, PKdatum, PKzeit, M, W, B) VALUES (?, ?, ?, ?, ?, ?, ?, ?);', [req.body.PKVname, req.body.PKNname, req.body.PKMail, req.body.PKdatum, req.body.PKzeit, req.body.M, req.body.W, req.body.B], (err) => {
-  if(err) {
-    // Im Errorfall z.B. die gleiche Seite nochmals anzeigen
-    res.render('pages/index');
-  } else {
-    // Ansonsten redirect auf die Index Route
-    res.redirect('/');
-  }
-});
 
-app.get('/empfangen', (res, req) => {})
+app.get('/empfangen', (req, res) => {
+  console.log(req.body)
+});
 //---schreiben---<
 
 app.get('/api/ProbeKunden', (req, res) => {
