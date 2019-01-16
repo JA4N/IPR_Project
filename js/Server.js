@@ -97,19 +97,19 @@ app.get('/login', function(req, res) {
 //   console.log(req.body.Lname, req.body.Lpw,)    
 // })
 
-app.post('/login-list', async(req, res) => {
+app.get('/login-list', async(req, res) => {
   db.all('SELECT * FROM ProbeKunden', (err, ProbeKunden) => {
     const datenDieWirAnDieViewAlsJsonUebergeben = {
       ProbeKunden
     }
-    if (req.body.Lname === 'admin' && req.body.Lpw === '123456'){
+    if (req.query.Lname === 'admin' && req.query.Lpw === '123456'){
     res.render('pages/login-list', datenDieWirAnDieViewAlsJsonUebergeben) 
-    console.log(req.body.Lname, req.body.Lpw)
+    console.log(req.query.Lname, req.query.Lpw)
   }
   res.render('pages/login');
-  console.log(req.body.Lname, req.body.Lpw)
+  console.log(req.query.Lname, req.query.Lpw)
   });
-  console.log(req.body.Lname, req.body.Lpw)
+  console.log(req.query.Lname, req.query.Lpw)
   });
 
 //---schreiben--->
