@@ -104,7 +104,7 @@ app.get('/login-list', async (req, res) => {
 });
 //---schreiben--->
 
-app.get('/empfangen', (req, res) => {
+app.post('/empfangen', (req, res) => {
   console.log(req.body)
 });
 //---schreiben---<

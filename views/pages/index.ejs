@@ -64,17 +64,17 @@
                     Dann buchen Sie unverbindlich ein Probetraining bei uns an Ihrem Wunschtermin.</p>
                 </div>
                 <div class="col simple-form">
-                    <form id="registration" action="/empfangen" method="GET">
-                        <input type="text" name="fvorname" id="button" placeholder="Vorname"><br>
+                    <form id="registration" action="/empfangen" method="POST">
+                        <input type="text" name="PKVname" id="button" placeholder="Vorname"><br>
                         <br>
-                        <input type="text" name="fnachname" id="button" placeholder="Nachname"><br>
+                        <input type="text" name="PKNname" id="button" placeholder="Nachname"><br>
                         <br>
-                        <input type="email" name="fmail" id="button" placeholder="E-Mail"><br>
+                        <input type="email" name="PKMail" id="button" placeholder="E-Mail"><br>
                         <br>
-                        <input type="date" name="fdatum" id="button" placeholder="Datum">
-                        <input type="time" name="ftime" id="button" placeholder="Datum"><br>
+                        <input type="date" name="PKdatum" id="button" placeholder="Datum">
+                        <input type="time" name="PKzeit" id="button" placeholder="Datum"><br>
                         <br><br>
-                        <a href="#"><button type="button" id="butt">Anmeldung</button></a>
+                        <a href="/empfangen"><button type="submit" id="butt">Anmeldung</button></a>
                     </form>
 
                 </div>
