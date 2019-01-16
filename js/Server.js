@@ -93,18 +93,23 @@ app.get('/login', function(req, res) {
 
 //-------------Login Seite-------------<
 //-------------ProbeKunden------------->
-app.post('/login-list', async (req, res) => {
+// app.post('/login-list', async (req, res) => {
+//   console.log(req.body.Lname, req.body.Lpw,)    
+// })
+
+app.post('/login-list', async(req, res) => {
   db.all('SELECT * FROM ProbeKunden', (err, ProbeKunden) => {
     const datenDieWirAnDieViewAlsJsonUebergeben = {
       ProbeKunden
     }
     if (req.body.Lname === 'admin' && req.body.Lpw === '123456'){
     res.render('pages/login-list', datenDieWirAnDieViewAlsJsonUebergeben) 
-    console.log(req.body)
+    console.log(req.body.Lname, req.body.Lpw)
   }
   res.render('pages/login');
-  console.log(req.body)
+  console.log(req.body.Lname, req.body.Lpw)
   });
+  console.log(req.body.Lname, req.body.Lpw)
   });
 
 //---schreiben--->
