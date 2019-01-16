@@ -11,14 +11,16 @@
 
 <div class="login-box">
     <h1>Login</h1>
+    <form id="login" action="/login-list" method="POST"></form>
     <div class="textbox">
-        <input type="text" placeholder="Benutzername" name="" value="">
+        <input type="text" placeholder="Benutzername" name="Lname">
     </div>
     <div class="textbox">
-        <input type="password" placeholder="Passwort" name="" value="">
+        <input type="password" placeholder="Passwort" name="Lpw">
     </div>
 
-    <input class="btn" type="button" name="" value="Einloggen">
+    <a href="/login-list"><button type="submit" id="butt">Einlogen</button></a>
+</form>
 </div>
 
 </body>
