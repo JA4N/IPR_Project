@@ -105,6 +105,15 @@ app.get('/login-list', async (req, res) => {
 //---schreiben--->
 
 app.post('/empfangen', (req, res) => {
+  db.run('INSERT INTO ProbeKunden(PKVname, PKNname, PKmail, PKdatum, PKzeit) VALUES (?, ?, ?, ?, ?);', [req.body.PKVname, req.body.PKNname, req.body.PKmail, req.body.PKdatum, req.body.PKzeit], (err) => {
+    if(err) {
+      // Im Errorfall z.B. die gleiche Seite nochmals anzeigen
+      res.render('pages/index');
+    } else {
+      // Ansonsten redirect auf die Index Route
+      res.redirect('/');
+    }
+  });
   console.log(req.body)
 });
 //---schreiben---<
