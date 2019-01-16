@@ -60,3 +60,7 @@ body{
     cursor: pointer;
     margin: 12px 0;
 }
+
+.btn:hover{
+    background-color: #4caf50;
+}
