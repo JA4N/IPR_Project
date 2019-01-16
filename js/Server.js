@@ -136,7 +136,9 @@ app.get('/api/ProbeKunden', (req, res) => {
     res.json(rows);
   });
 });
-
+app.get('/product-order', function(req, res) {
+  res.render('pages/product_order')
+});
 //-------------ProbeKunden--------------<
 
 const server = app.listen(port, () => {
