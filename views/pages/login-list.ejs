@@ -40,7 +40,7 @@
                 <table class="table table-striped table-dark">
                     <thead>
                     <tr>
-                        <th scope="col">Geschlecht</th>
+                        <th scope="col">ID</th>
                         <th scope="col">Vorname</th>
                         <th scope="col">Nachname</th>
                         <th scope="col">E-Mail</th>
@@ -51,7 +51,7 @@
                     <tbody>
                     <% ProbeKunden.forEach((PK) => { %>
                     <tr>
-                        <td><%= PK.M %></td>
+                        <td><%= PK.id %></td>
                         <td><%= PK.PKVname %></td>
                         <td><%= PK.PKNname %></td>
                         <td><%= PK.PKmail %></td>
